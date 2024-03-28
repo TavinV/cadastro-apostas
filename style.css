@@ -1,0 +1,34 @@
+.cadastro{
+    display: flex;
+    justify-content: center;
+}
+
+.nome-sobrenome {
+    
+    display: grid;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.enviar {
+    display: flex;
+    justify-content: center;
+}
+
+.botao-enviar {
+    background-color: cornflowerblue;
+    margin-top: 30px;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+    font-family: monospace;
+
+}
+
+.botao-enviar:hover{
+    background-color: cadetblue;
+    color: rgb(255, 255, 255);
+    
+}
