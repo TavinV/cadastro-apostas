@@ -37,6 +37,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    transition: all 0.2s ease;
+}
+
+.header-nav .left-most-content:hover {
+    transform: scale(1.01);
 }
 
 .header-nav .left-most-content .menu-img {
@@ -77,19 +83,17 @@ body {
     width: 550px;
     padding: 5px 5px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
     color: #eae2b7;
-    margin-right: 30px;
-
 }
 
 .header-nav .games .game-link {
     display: flex;
-    width: 120px;
+    width: max-content;
     height: 60px;
     align-items: center;
     justify-content: space-evenly;
@@ -139,7 +143,6 @@ body {
 }
 
 .header-nav .login-register .login-button:hover {
-
     color: #f77f00;
 }
 
@@ -169,23 +172,54 @@ body {
 }
 
 .page-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: scroll;
+    
+    align-items: center;
+    scroll-behavior: smooth;
     position: fixed;
     top: 100px;
     width: 100%;
     height: 100%;
     padding: 30px 30px 30px 30px;
-    background-color: #eae2b7;
+    background-color: #003049;
+    
     align-items: center;
 
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #003049;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #eae2b7;
+    
+  }
+  
+  /* Handle on hover */
+
+
 .meet-vitin-bet {
+    justify-content: center;
+    height: 800px;
+    width: 70%;
     display: flex;
-    background: grey;
+    background: linear-gradient(#003049,#00283b);
 }
 
 .meet-vitin-bet .vitin-bet-title {
     font-size: 60px;
     font-weight: 400;
-    color: #d62828;
+    color: #eae2b7;
 }
