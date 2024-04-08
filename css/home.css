@@ -185,13 +185,11 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    padding: 30px 20px 30px 30px;
-
-    aspect-ratio: 16/9;
+    padding-top: 30px;
     background-repeat: repeat-x;
     background-position: center;
 
-    background-image: url(img/dragon-scales.svg);
+    background-image: url(../img/dragon-scales.svg);
 }
 
 /* width */
@@ -267,7 +265,7 @@ body {
 }
 
 .generic-content-container .signin-bonus {
-    font-size: 150px;
+    font-size: 100px;
     color: #ff0033;
     font-weight: 600;
 }
@@ -277,12 +275,47 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    right: -250px;
-    height: 500px;
-    width: 400px;
+    height: fit-content;
+    width: fit-content;
 }
 
-.image-container-generic .tiger-img {
+.image-container-generic .tiger-img, .ox-img {
+    height: 700px;
+    width: fit-content;
+}
+
+.pg-games-title-img{ 
     height: 500px;
-    width: 400px;
+    width: 550px;
+}
+
+.ox-title-img{
+    transform: scale(3);
+}
+
+.page-footer {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 400px;
+    background: linear-gradient(0deg, #00121b 78%, rgba(255,255,255,0) 100%);
+    gap: 100px
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.whatsapp-img, .email-img{
+    height: 32px;
+    width: 32px;
+    filter: invert();
 }

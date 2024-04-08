@@ -2,7 +2,7 @@ const login = document.getElementById('LOGIN_BUTTON');
 const register = document.getElementById('REGISTER_BUTTON');
 
 login.addEventListener("click", () => {
-    alert("LOGIN")
+    window.open("../separate-pages/login.html", '_blank');
 })
 
 register.addEventListener("click", () => {
