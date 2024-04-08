@@ -121,16 +121,68 @@ body {
 }
 
 .login-register-container {
+    border-radius: 15px;
+    border: 2px solid #ffff;
+    color: #ffff;
+
     display: block;
     justify-content: center;
     align-items: center;
-    background-color: #f77f00;
+    backdrop-filter: blur(30px);
 
-    height: 450px;
-    width: 450px;
+    height: 750px;
+    width: 550px;
     padding: 5%;
 }
 
-h2{
+.title-container{
+    width: 100%;
+    text-align: center;
     font-size: 40px;
+}
+
+.main-inputs-container {
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.input-box{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.remember-me-box{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: left;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    background: transparent;
+}
+
+.input-password, .input-email {
+    width: 70%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.icon{
+    font-size: x-large;
+    --ionicon-stroke-width: 30px;
 }
