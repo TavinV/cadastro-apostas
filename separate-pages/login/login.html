@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎲 Vitin Bet | Login</title>
+    <link rel="icon" type="image/png" href="../../../img/logo.png">
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header-container">
+        <header>
+
+            <nav class="header-nav">
+
+                <div class="left-most-content">
+                    <div class="menu">
+                        <img class="menu-img" src="../../../img/menu.png" alt="">
+
+                    </div>
+
+                    <div class="logo-and-text">
+                        <img class="logo-image" src="../../../img/logo.png" alt="">
+                        <a href="../../../index.html" class="logo-text">Vitin bet</a>
+                    </div>
+                </div>
+
+            </nav>
+
+        </header>
+    </div>
+
+    <div class="page-container">
+        <div class="password-wrapper">
+            <div class="login-register-container">
+
+                <div class="title-container">
+                    <h2>Login</h2>
+                </div>
+
+                <form action="" id="login-form">
+
+
+                    <div class="main-inputs-container">
+
+                        <div class="input-box">
+                            <label>Email</label>
+                            <input id="email-input" class="input-email" type="email" required>
+                            <ion-icon class="icon" name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="input-box">
+                            <label>Senha</label>
+                            <input id="password-input" class="input-password" type="password" required>
+                            <button id="toggle-password-display" type="button" class="toggle-password-display">
+                                <ion-icon id="password-icon" class="icon" name="eye-outline"></ion-icon>
+                            </button>
+                            <!---- <ion-icon class="icon" name="lock-closed-outline"></ion-icon> -->
+                        </div>
+                    </div>
+
+
+                    <div class="links">
+                        <span class="forgot-password-link"> <a href="#">Esqueceu sua senha?</a> </span>
+
+                    </div>
+
+                    <div class="login-button-container">
+                        <button type="submit" class="login-button">
+                            <span class="login-button-span">
+                                Login
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="second-level-links">
+                        <span class="remember-me-span">
+                            <input id="remember-me-input" class="checkbox" type="checkbox">
+                            <label>Lembrar de mim?</label>
+                        </span>
+
+                        <span class="create-account"> <a href="#">Criar conta</a>
+                            <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
+                        </span>
+
+                    </div>
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+        <div class="page-footer">
+            <span class="contact-info">
+                <ion-icon class="icon" name="logo-whatsapp"></ion-icon>
+                +55 11 95313-5148
+            </span>
+            <span class="contact-info">
+                <ion-icon class="icon" name="mail-outline"></ion-icon>
+                help@vitinbet.com
+            </span>
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="src/login.js"></script>
+</body>
+
+</html>
