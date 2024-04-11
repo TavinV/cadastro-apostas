@@ -225,11 +225,12 @@ body {
     backdrop-filter: blur(20px);
     background: transparent;
     box-shadow: rgba(0, 0, 0, 0.15) 20px 19px 20px 0px;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
 }
 
 .generic-content-container:hover {
     transform: scale(1.01);
+    
 }
 
 .generic-content-container .vitin-bet-title {

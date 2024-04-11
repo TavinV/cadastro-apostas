@@ -121,6 +121,7 @@ body {
 }
 
 .login-register-container {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.61);
     border-radius: 15px;
     border: 2px solid #ffff;
     color: #ffff;
@@ -193,7 +194,7 @@ body {
 
 .input-password,
 .input-email {
-    width: 70%;
+    width: 80%;
     height: 100%;
     font-size: 15px;
     background: transparent;
@@ -287,6 +288,7 @@ body {
 }
 
 .already-has-an-account {
+    font-weight: 100;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -296,7 +298,18 @@ body {
     font-size: 15px;
     font-weight: 600;
     color: rgb(255, 255, 255);
-    text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.61);
+}
+
+.terms-of-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    gap: 5px;
+}
+
+.terms-of-service .terms-of-service-link{
+    text-decoration: underline;
 }
 
 .icon {
