@@ -15,7 +15,7 @@ const passwordIcon2 = document.getElementById("password-icon2")
 const hidenPasswordIcon = "eye-outline";
 const exposedPasswordIcon = "eye-off-outline";
 
-togglePasswordDisplay.addEventListener('click', ()=>{
+togglePasswordDisplay.addEventListener('click', () => {
     if (passwordHidden) {
         passwordInput.type = "text";
         passwordHidden = false;
@@ -28,7 +28,7 @@ togglePasswordDisplay.addEventListener('click', ()=>{
     }
 })
 
-togglePasswordDisplay2.addEventListener('click', ()=>{
+togglePasswordDisplay2.addEventListener('click', () => {
     if (passwordHidden2) {
         passwordInput2.type = "text";
         passwordHidden2 = false;
@@ -40,3 +40,5 @@ togglePasswordDisplay2.addEventListener('click', ()=>{
         passwordIcon2.name = hidenPasswordIcon;
     }
 })
+
+// Checar
