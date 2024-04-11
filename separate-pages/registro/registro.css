@@ -193,13 +193,12 @@ body {
 
 .input-password,
 .input-email {
-    width: 85%;
+    width: 70%;
     height: 100%;
     font-size: 15px;
     background: transparent;
     border: none;
     outline: none;
-
 }
 
 .toggle-password-display {
@@ -287,7 +286,7 @@ body {
     font-size: 15px;
 }
 
-.create-account {
+.already-has-an-account {
     display: flex;
     align-items: center;
     justify-content: center;

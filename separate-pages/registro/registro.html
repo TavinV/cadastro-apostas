@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎲 Vitin Bet | Login</title>
+    <title>🎲 Vitin Bet | Registrar-se</title>
     <link rel="icon" type="image/png" href="../../../img/logo.png">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="registro.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,21 +43,28 @@
             <div class="login-register-container">
 
                 <div class="title-container">
-                    <h2>Login</h2>
+                    <h2>Registrar-se</h2>
                 </div>
 
-                <form action="" id="login-form">
+                <form action="" id="register-form">
 
 
                     <div class="main-inputs-container">
 
                         <div class="input-box">
-                            <input id="email-input" class="input-email" type="email" placeholder="Email" required>
+                            <input id="email-input" class="input-email" type="email" required>
                             <ion-icon class="icon" name="mail-outline"></ion-icon>
                         </div>
 
                         <div class="input-box">
-                            <input id="password-input" class="input-password" type="password" placeholder="Senha" required>
+                            <input id="password-input" class="input-password" type="password" required>
+                            <button id="toggle-password-display" type="button" class="toggle-password-display">
+                                <ion-icon id="password-icon" class="icon" name="eye-outline"></ion-icon>
+                            </button>
+                        </div>
+
+                        <div class="input-box">
+                            <input id="password-input2" class="input-password" type="password" required>
                             <button id="toggle-password-display" type="button" class="toggle-password-display">
                                 <ion-icon id="password-icon" class="icon" name="eye-outline"></ion-icon>
                             </button>
@@ -66,13 +73,13 @@
 
 
                     <div class="links">
-                        <span class="forgot-password-link"> <a href="#">Esqueceu sua senha?</a> </span>
+
                     </div>
 
                     <div class="login-button-container">
                         <button type="submit" class="login-button">
                             <span class="login-button-span">
-                                Login
+                                
                             </span>
                         </button>
                     </div>
@@ -80,9 +87,10 @@
                     <div class="second-level-links">
                         <span class="remember-me-span">
                             <input id="remember-me-input" class="checkbox" type="checkbox">
+                            <label>Lembrar de mim?</label>
                         </span>
 
-                        <span class="create-account"> <a href="../registro/registro.html">Criar conta</a>
+                        <span class="already-has-an-account"> <a href="../login/login.html">Já tem uma conta? Login</a>
                             <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
                         </span>
 
