@@ -16,6 +16,11 @@ body {
     color: #eae2b7;
 }
 
+.btn-link {
+    height: max-content;
+    width: max-content;
+}
+
 .header-nav {
     padding: 5px 20px;
     position: fixed;
@@ -130,7 +135,7 @@ body {
     height: 50px;
 }
 
-.header-nav .login-register .login-button {
+.header-nav .login-register .login-button, .btt-link {
     height: inherit;
     width: 150px;
     font-size: 15px;

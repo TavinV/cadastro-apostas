@@ -1,57 +1,42 @@
 const togglePasswordDisplay = document.getElementById("toggle-password-display");
-const passwordDisplayBox = document.getElementById("password-input");
-const passwordDisplayBox2 = document.getElementById("password-input2");
+const passwordInput = document.getElementById("password-input");
 const passwordIcon = document.getElementById("password-icon");
+var passwordHidden = true;
+
+// password 2 variables
+
+var passwordHidden2 = true;
+const togglePasswordDisplay2 = document.getElementById("toggle-password-display2");
+const passwordInput2 = document.getElementById("password-input2");
+const passwordIcon2 = document.getElementById("password-icon2")
+
+// shared variables
 
 const hidenPasswordIcon = "eye-outline";
 const exposedPasswordIcon = "eye-off-outline";
 
-var passwordHidden = true;
-
-togglePasswordDisplay.addEventListener('click', () => {
+togglePasswordDisplay.addEventListener('click', ()=>{
     if (passwordHidden) {
-        // Caso a senha estiver escondida, iremos mostra-lá e alterar o icone.
-
-        passwordDisplayBox.type = "text";
-        passwordIcon.name = exposedPasswordIcon;
+        passwordInput.type = "text";
         passwordHidden = false;
+        passwordIcon.name = exposedPasswordIcon;
     }
     else {
-        // Caso a senha estiver exposta, iremos esconde-lá e alterar o icone.
-
-        passwordDisplayBox.type = "password";
-        passwordIcon.name = hidenPasswordIcon;
+        passwordInput.type = "password";
         passwordHidden = true;
+        passwordIcon.name = hidenPasswordIcon;
     }
 })
 
-togglePasswordDisplay.addEventListener('click', () => {
-    if (passwordHidden) {
-        // Caso a senha estiver escondida, iremos mostra-lá e alterar o icone.
-
-        passwordDisplayBox.type = "text";
-        passwordIcon.name = exposedPasswordIcon;
-        passwordHidden = false;
+togglePasswordDisplay2.addEventListener('click', ()=>{
+    if (passwordHidden2) {
+        passwordInput2.type = "text";
+        passwordHidden2 = false;
+        passwordIcon2.name = exposedPasswordIcon;
     }
     else {
-        // Caso a senha estiver exposta, iremos esconde-lá e alterar o icone.
-
-        passwordDisplayBox.type = "password";
-        passwordIcon.name = hidenPasswordIcon;
-        passwordHidden = true;
+        passwordInput2.type = "password";
+        passwordHidden2 = true;
+        passwordIcon2.name = hidenPasswordIcon;
     }
-})
-
-// REALIZANDO A IMPRESSÃO DOS DETALHES DE LOGIN
-
-const registerForm = document.getElementById("register-form");
-const emailTextBox = document.getElementById("email-input");
-const lembrarDeMimInput = document.getElementById("remember-me-input");
-
-registerForm.addEventListener('submit', () => {
-    let passwordGiven = passwordDisplayBox.value;
-    let emailGiven = emailTextBox.value;
-    let lembrarDeMimGiven = lembrarDeMimInput.value;
-
-    alert("LOGIN FEITO: \n Email: " + emailGiven + "\nSenha: " + passwordGiven + "\n Lembrar de mim: " + lembrarDeMimGiven)
 })

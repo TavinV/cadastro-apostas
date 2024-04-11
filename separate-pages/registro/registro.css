@@ -131,7 +131,7 @@ body {
     align-items: center;
     backdrop-filter: blur(30px);
 
-    height: 550px;
+    height: 850px;
     width: 550px;
     margin-bottom: 300px;
     padding: 5%;
@@ -168,7 +168,7 @@ body {
     display: flex;
     gap: 10px;
     font-size: small;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border: none;
     border-radius: 8px;
@@ -188,12 +188,15 @@ body {
     height: 15px;
     width: 15px;
     border-radius: 5%;
-
-
 }
 
 .input-password,
-.input-email {
+.input-email, 
+.input-username, 
+.input-age,
+.input-phone,
+.input-cpf {
+    
     width: 80%;
     height: 100%;
     font-size: 15px;
@@ -201,6 +204,18 @@ body {
     border: none;
     outline: none;
 }
+
+.input-password::placeholder,
+.input-email::placeholder, 
+.input-username::placeholder, 
+.input-age::placeholder,
+.input-phone::placeholder,
+.input-cpf::placeholder
+{
+color: #ffff;
+}
+
+::-webkit-calendar-picker-indicator { opacity: 0;}
 
 .toggle-password-display {
     display: flex;
@@ -273,9 +288,11 @@ body {
 .links {
     padding: 1%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    gap: 10px;
 }
 
 
@@ -300,9 +317,14 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.terms-of-service {
+.login-link{
+    text-decoration: underline;
+}
+
+.terms-of-service, .news-letter{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     font-size: 10px;
     gap: 5px;

@@ -57,6 +57,27 @@
                         </div>
 
                         <div class="input-box">
+                            <input id="username-input" class="input-username" type="text" placeholder="Seu nome de usuário" required>
+                            <ion-icon class="icon" name="person-outline"></ion-icon>
+                        </div>
+
+                        <div class="input-box">
+                            <input id="age-input" class="input-age" type="date" required>
+                            <ion-icon class="icon" name="calendar-number-outline"></ion-icon>
+                        </div>
+
+                        <div class="input-box">
+                            <input id="phone-input" class="input-phone" type="tel" placeholder="Seu telefone" required>
+                            <ion-icon class="icon" name="call-outline"></ion-icon>
+                        </div>
+
+                        <div class="input-box">
+                            <input id="cpf-input" class="input-cpf" type="number" placeholder="Seu CPF sem pontos ou traços" required>
+                            <ion-icon class="icon" name="finger-print-outline"></ion-icon>
+                        </div>
+
+
+                        <div class="input-box">
                             <input id="password-input" class="input-password" type="password" placeholder="Escolha uma senha" required>
                             <button id="toggle-password-display" type="button" class="toggle-password-display">
                                 <ion-icon id="password-icon" class="icon" name="eye-outline"></ion-icon>
@@ -66,7 +87,7 @@
                         <div class="input-box">
                             <input id="password-input2" class="input-password" type="password" placeholder="Confirme sua senha" required>
                             <button id="toggle-password-display2" type="button" class="toggle-password-display">
-                                <ion-icon id="password-icon" class="icon" name="eye-outline"></ion-icon>
+                                <ion-icon id="password-icon2" class="icon" name="eye-outline"></ion-icon>
                             </button>
                         </div>
                     </div>
@@ -75,7 +96,11 @@
                     <div class="links">
                         <span class="terms-of-service">
                             <input type="checkbox" required>
-                            <label>Ao me registrar eu concordo com os <a href="#" class="terms-of-service-link">termos de condições</a></label>
+                            <label>Ao me registrar eu concordo com os <a target=”_blank” href="../termos.html" class="terms-of-service-link">termos de condições</a></label>
+                        </span>
+                        <span class="news-letter">
+                            <input type="checkbox">
+                            <label>Me mandar emails com promoções e novidades periodicamente</label>
                         </span>
                     </div>
 
@@ -89,7 +114,7 @@
 
                     <div class="second-level-links">
                         <span class="already-has-an-account">
-                                <a href="../login/login.html">Já tem uma conta? Login</a>
+                            Já tem uma conta?<a class="login-link" href="../login/login.html">Faça Login</a>
                         </span>
 
                     </div>
@@ -116,7 +141,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="src/login.js"></script>
+    <script src="src/register.js"></script>
 </body>
 
 </html>

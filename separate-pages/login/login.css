@@ -301,6 +301,10 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.create-acc-link {
+    text-decoration: underline;
+}
+
 .icon {
     font-size: x-large;
     --ionicon-stroke-width: 30px;
