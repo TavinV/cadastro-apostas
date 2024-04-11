@@ -6,5 +6,5 @@ login.addEventListener("click", () => {
 })
 
 register.addEventListener("click", () => {
-    alert("Eloisie volta 😭")
+    alert("");
 })
