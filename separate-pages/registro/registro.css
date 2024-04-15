@@ -132,7 +132,7 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(30px);
 
-    height: 800px;
+    height: 900px;
     width: 1000px;
     margin-bottom: 300px;
     padding: 5%;
@@ -142,8 +142,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eae2b7;
-    
 }
 
 .title-container {
@@ -154,7 +152,6 @@ body {
 }
 
 .first-inputs-container, .seccond-inputs-container {
-    border: 2px solid salmon;
     display: flex;
     flex-direction:column ;
     justify-content: center;
@@ -170,6 +167,7 @@ body {
     align-items: left;
     justify-content: center;
     margin-bottom: 40px;
+    width: 90%;
     gap: 5px;
 }
 
@@ -322,13 +320,10 @@ color: #ffff;
 }
 
 .links {
-    padding: 1%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    gap: 10px;
 }
 
 
@@ -360,7 +355,7 @@ color: #ffff;
 .terms-of-service, .news-letter{
     width: 100%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     font-size: 10px;
     gap: 5px;

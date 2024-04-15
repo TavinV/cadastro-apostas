@@ -42,3 +42,12 @@ togglePasswordDisplay2.addEventListener('click', () => {
 })
 
 // Checar 
+
+template = `
+Hi
+<ion-icon name="warning-outline"></ion-icon>
+`
+
+alert("You are my sunshine")
+error = document.getElementById("error-message-email")
+error.innerHTML = template
