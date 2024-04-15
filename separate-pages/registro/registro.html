@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎲 Vitin Bet | Registrar-se</title>
+    <title>🎲 Vitin bet | Registrar-se</title>
     <link rel="icon" type="image/png" href="../../img/logo.png">
     <link rel="stylesheet" href="registro.css">
 
@@ -43,60 +43,140 @@
             <div class="login-register-container">
 
                 <div class="title-container">
-                    <h2>Registrar-se</h2>
+                    <h2>Registrar-se </h2>
                 </div>
 
                 <form action="" id="register-form">
 
+                    <div class="both-inputs-container">
 
-                    <div class="main-inputs-container">
 
-                        <div class="input-box">
-                            <input id="email-input" class="input-email" type="email" placeholder="seu@email.com"
-                                required>
-                            <ion-icon class="icon" name="mail-outline"></ion-icon>
+                        <div class="first-inputs-container">
+
+                            <!-- Email -->
+
+                            <div class="input-box-container">
+                                <div class="input-box">
+                                    <input id="email-input" class="input-email" type="email" placeholder="seu@email.com"
+                                        required>
+                                    <ion-icon class="icon" name="mail-outline"></ion-icon>
+                                </div>
+                                <div class="error-message">
+                                    email incorreto
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                </div>
+                            </div>
+
+
+                            <!-- Username -->
+
+                            <div class="input-box-container">
+                                <div class="input-box">
+                                    <input id="username-input" class="input-username" type="text"
+                                        placeholder="Seu nome de usuário" required>
+                                    <ion-icon class="icon" name="person-outline"></ion-icon>
+                                </div>
+                                <div class="error-message">
+                                    Hello
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                </div>
+                            </div>
+
+                            <!-- Senha e confime senha -->
+
+                            <div class="input-box-container">
+                                <div class="input-box">
+                                    <input id="password-input" class="input-password" type="password"
+                                        placeholder="Escolha uma senha" required>
+                                    <button id="toggle-password-display" type="button" class="toggle-password-display">
+                                        <ion-icon id="password-icon" class="icon" name="eye-outline"></ion-icon>
+                                    </button>
+                                </div>
+                                <div class="error-message">
+                                    Hello
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                </div>
+                            </div>
+
+                            <div class="input-box-container">
+                                <div class="input-box">
+                                    <input id="password-input2" class="input-password" type="password"
+                                        placeholder="Confirme sua senha" required>
+                                    <button id="toggle-password-display2" type="button" class="toggle-password-display">
+                                        <ion-icon id="password-icon2" class="icon" name="eye-outline"></ion-icon>
+                                    </button>
+                                </div>
+                                <div class="error-message">
+                                    Hello
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="input-box">
-                            <input id="username-input" class="input-username" type="text"
-                                placeholder="Seu nome de usuário" required>
-                            <ion-icon class="icon" name="person-outline"></ion-icon>
+                        <!-- SEGUNDO CONTAINER DE INPUTS -->
+
+                        <div class="seccond-inputs-container">
+                            
+                            <!-- NOME -->
+                            
+                            <div class="input-box-container">
+                                <div class="input-box">
+                                    <input id="name-input" class="input-name" type="text" placeholder="Seu nome completo" required>
+                                    <ion-icon class="icon" name="person-outline"></ion-icon>
+                                </div>
+                                <div class="error-message">
+                                    Hello
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                </div>
+                            </div>
+
+                            <!-- iDADE -->
+                            
+                            <div class="input-box-container">
+                                <div class="input-box">
+                                    <input id="age-input" class="input-age" type="date" required>
+                                    <ion-icon class="icon" name="calendar-number-outline"></ion-icon>
+                                </div>
+                                <div class="error-message">
+                                    Hello
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                </div>
+                            </div>
+
+                            <!-- TELEFONE -->
+
+                            <div class="input-box-container">
+                                <div class="input-box">
+                                    <input id="phone-input" class="input-phone" type="tel" placeholder="Seu telefone"
+                                        required>
+                                    <ion-icon class="icon" name="call-outline"></ion-icon>
+                                </div>
+                                <div class="error-message">
+                                    Hello
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                </div>
+                            </div>
+
+                            <!-- CPF -->
+
+                            <div class="input-box-container">
+                                <div class="input-box">
+                                    <input id="cpf-input" class="input-cpf" type="number"
+                                        placeholder="Seu CPF sem pontos ou traços" required>
+                                    <ion-icon class="icon" name="finger-print-outline"></ion-icon>
+                                </div>
+                                <div class="error-message">
+                                    Hello
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                </div>
+                            </div>
+
+
+                            
                         </div>
 
-                        <div class="input-box">
-                            <input id="age-input" class="input-age" type="date" required>
-                            <ion-icon class="icon" name="calendar-number-outline"></ion-icon>
-                        </div>
 
-                        <div class="input-box">
-                            <input id="phone-input" class="input-phone" type="tel" placeholder="Seu telefone" required>
-                            <ion-icon class="icon" name="call-outline"></ion-icon>
-                        </div>
-
-                        <div class="input-box">
-                            <input id="cpf-input" class="input-cpf" type="number"
-                                placeholder="Seu CPF sem pontos ou traços" required>
-                            <ion-icon class="icon" name="finger-print-outline"></ion-icon>
-                        </div>
-
-
-                        <div class="input-box">
-                            <input id="password-input" class="input-password" type="password"
-                                placeholder="Escolha uma senha" required>
-                            <button id="toggle-password-display" type="button" class="toggle-password-display">
-                                <ion-icon id="password-icon" class="icon" name="eye-outline"></ion-icon>
-                            </button>
-                        </div>
-
-                        <div class="input-box">
-                            <input id="password-input2" class="input-password" type="password"
-                                placeholder="Confirme sua senha" required>
-                            <button id="toggle-password-display2" type="button" class="toggle-password-display">
-                                <ion-icon id="password-icon2" class="icon" name="eye-outline"></ion-icon>
-                            </button>
-                        </div>
                     </div>
-
 
                     <div class="links">
                         <span class="terms-of-service">
@@ -126,8 +206,6 @@
                     </div>
 
                 </form>
-
-
             </div>
 
         </div>

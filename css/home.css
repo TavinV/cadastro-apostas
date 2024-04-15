@@ -276,6 +276,9 @@ body {
 }
 
 .generic-content-container .signin-bonus {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     font-size: 60px;
     color: #ff0033;
     font-weight: 600;

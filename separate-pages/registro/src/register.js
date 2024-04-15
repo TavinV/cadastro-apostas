@@ -41,4 +41,4 @@ togglePasswordDisplay2.addEventListener('click', () => {
     }
 })
 
-// Checar
+// Checar 
