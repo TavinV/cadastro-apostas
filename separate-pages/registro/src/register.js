@@ -67,13 +67,17 @@ let errorMessageCpf = document.getElementById("error-message-cpf")
 
 const warningIcon = `<ion-icon name="warning-outline"></ion-icon>`
 const successIcon = `<ion-icon name="checkmark-outline"></ion-icon>`
-const successClass = "login-button"
+const successClass = "success-message"
 
 const register_form = document.getElementById("register-form");
 
-function stringContemTexto(texto1, texto2){
-    return texto2.split('').some(char => texto1)
-}
+function containsSpecialChars(str, chars) {
+    const specialChars = chars;
+    return specialChars
+      .split('')
+      .some((specialChar) => str.includes(specialChar));
+  }
+
 
 register_form.addEventListener('submit', (e) => {
     let erros = 0;
@@ -93,7 +97,7 @@ register_form.addEventListener('submit', (e) => {
     usernamePassed = true
 
     const prohibitedChars = `/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;~^1234567890`
-    const usernameContemCaracteresProibidos = stringContemTexto(inputs.username_input.value, prohibitedChars)
+    const usernameContemCaracteresProibidos = containsSpecialChars(inputs.username_input.value, prohibitedChars)
 
     if (usernameContemCaracteresProibidos) {
         erros ++
@@ -114,8 +118,8 @@ register_form.addEventListener('submit', (e) => {
     const specialChars = `/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;`
     const numbers =  `1234567890`
 
-    const senhaContemCaracterEspecial = stringContemTexto(inputs.password_input.value, specialChars)
-    const senhaContemNumeros = stringContemTexto(inputs.password_input.value, numbers)
+    const senhaContemCaracterEspecial = containsSpecialChars(inputs.password_input.value, specialChars)
+    const senhaContemNumeros = containsSpecialChars(inputs.password_input.value, numbers)
 
     if (!senhaContemCaracterEspecial) {
         erros++
@@ -152,14 +156,19 @@ register_form.addEventListener('submit', (e) => {
         errorMessagePassword2.setAttribute("class", successClass)
     }
 
-    // Nome completo
+    // Idade maior que 18
+    agePassed = true;
+    
+    let obj = new Date(); 
+    let year = obj.getFullYear()
 
-    if (inputs.name_input.value.split(" ").lenght < 1) {
-        // Caso o nome completo seja pelo menos um nome e sobrenome
+    anoInserido = inputs.age_input.value.split("-")[0]
 
-
+    if (year - anoInserido < 18){
+        erros++
+        errorMessageAge.innerHTML = "Esse site é proibido para menores de 18 anos!" + warningIcon
+        
     }
-
     // Impedir o envio do formulario 
 
     if (erros > 0){
