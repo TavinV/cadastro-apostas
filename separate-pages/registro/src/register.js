@@ -68,6 +68,7 @@ let errorMessageCpf = document.getElementById("error-message-cpf")
 const warningIcon = `<ion-icon name="warning-outline"></ion-icon>`
 const successIcon = `<ion-icon name="checkmark-outline"></ion-icon>`
 const successClass = "success-message"
+const successClass = "success-message"
 
 const register_form = document.getElementById("register-form");
 
@@ -152,14 +153,19 @@ register_form.addEventListener('submit', (e) => {
         errorMessagePassword2.setAttribute("class", successClass)
     }
 
-    // Nome completo
+    // Idade maior que 18
+    agePassed = true;
 
-    if (inputs.name_input.value.split(" ").lenght < 1) {
-        // Caso o nome completo seja pelo menos um nome e sobrenome
+    let obj = new Date();
+    let year = obj.getFullYear()
 
+    anoInserido = inputs.age_input.value.split("-")[0]
+
+    if (year - anoInserido < 18) {
+        erros++
+        errorMessageAge.innerHTML = "Esse site é proibido para menores de 18 anos!" + warningIcon
 
     }
-
     // Impedir o envio do formulario 
 
     if (erros > 0) {
