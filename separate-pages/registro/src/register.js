@@ -42,14 +42,14 @@ togglePasswordDisplay2.addEventListener('click', () => {
 })
 
 let inputs = {
-    email_input : document.getElementById("email-input"),
-    username_input : document.getElementById("username-input"),
-    password_input : document.getElementById("password-input"),
-    password2_input : document.getElementById("password-input2"),
-    name_input : document.getElementById("name-input"),
-    age_input : document.getElementById("age-input"),
-    phone_input : document.getElementById("phone-input"),
-    cpf_input : document.getElementById("cpf-input"),
+    email_input: document.getElementById("email-input"),
+    username_input: document.getElementById("username-input"),
+    password_input: document.getElementById("password-input"),
+    password2_input: document.getElementById("password-input2"),
+    name_input: document.getElementById("name-input"),
+    age_input: document.getElementById("age-input"),
+    phone_input: document.getElementById("phone-input"),
+    cpf_input: document.getElementById("cpf-input"),
 }
 
 // Mensagens de erro
@@ -67,11 +67,11 @@ let errorMessageCpf = document.getElementById("error-message-cpf")
 
 const warningIcon = `<ion-icon name="warning-outline"></ion-icon>`
 const successIcon = `<ion-icon name="checkmark-outline"></ion-icon>`
-const successClass = "login-button"
+const successClass = "success-message"
 
 const register_form = document.getElementById("register-form");
 
-function stringContemTexto(texto1, texto2){
+function stringContemTexto(texto1, texto2) {
     return texto2.split('').some(char => texto1)
 }
 
@@ -80,11 +80,11 @@ register_form.addEventListener('submit', (e) => {
 
     // Todos os campos estão preenchidos
 
-    for(const [key, value] of Object.entries(inputs)){
+    for (const [key, value] of Object.entries(inputs)) {
         // alert(key + " : " + value.value);
 
-        if (value.value == " " || value.value == null || value.value == ""){
-           value.innerHTML = "Campo obrigatório!"
+        if (value.value == " " || value.value == null || value.value == "") {
+            value.innerHTML = "Campo obrigatório!"
         }
     }
 
@@ -93,10 +93,10 @@ register_form.addEventListener('submit', (e) => {
     usernamePassed = true
 
     const prohibitedChars = `/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;~^1234567890`
-    const usernameContemCaracteresProibidos = stringContemTexto(inputs.username_input.value, prohibitedChars)
+    const usernameContemCaracteresProibidos = prohibitedChars.split('').some(char => inputs.username_input.value)
 
     if (usernameContemCaracteresProibidos) {
-        erros ++
+        erros++
         usernamePassed = false
         errorMessageUsername.innerHTML = "O nome de usuário não pode conter caracteres especiais!" + warningIcon
     }
@@ -112,10 +112,10 @@ register_form.addEventListener('submit', (e) => {
     passwordPassed = true
 
     const specialChars = `/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;`
-    const numbers =  `1234567890`
+    const numbers = `1234567890`
 
-    const senhaContemCaracterEspecial = stringContemTexto(inputs.password_input.value, specialChars)
-    const senhaContemNumeros = stringContemTexto(inputs.password_input.value, numbers)
+    const senhaContemCaracterEspecial = specialChars.split('').some(char => inputs.password_input.value)
+    const senhaContemNumeros = numbers.split('').some(char => inputs.password_input.value)
 
     if (!senhaContemCaracterEspecial) {
         erros++
@@ -140,7 +140,7 @@ register_form.addEventListener('submit', (e) => {
 
     password2Passed = true
 
-    if (inputs.password_input.value != inputs.password2_input.value){
+    if (inputs.password_input.value != inputs.password2_input.value) {
         erros++
         password2Passed = false
         errorMessagePassword2.innerHTML = "As senhas não coincidem!" + warningIcon
@@ -162,7 +162,38 @@ register_form.addEventListener('submit', (e) => {
 
     // Impedir o envio do formulario 
 
-    if (erros > 0){
+    if (erros > 0) {
         e.preventDefault()
+    }
+})
+
+// Adicionar traços, DDD entre outros
+
+let CpfInput = inputs.cpf_input
+
+CpfInput.addEventListener('keypress', () => {
+
+    let TextLenght = CpfInput.value.length
+
+    if (TextLenght === 3 || TextLenght === 7) {
+        CpfInput.value += '.'
+    } else if (TextLenght === 11) {
+        CpfInput.value += '-'
+    }
+})
+
+let PhoneInput = inputs.phone_input
+
+PhoneInput.addEventListener('keypress', () => {
+    let TextLenght = PhoneInput.value.length
+
+    console.log(PhoneInput.value.charAt(PhoneInput.value.length))
+
+    if (TextLenght === 0) {
+        PhoneInput.value += "+"
+    } else if (TextLenght === 3 || TextLenght === 6) {
+        PhoneInput.value += " "
+    } else if (TextLenght === 12) {
+        PhoneInput.value += "-"
     }
 })

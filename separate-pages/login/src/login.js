@@ -30,11 +30,11 @@ const loginForm = document.getElementById("login-form");
 const emailTextBox = document.getElementById("email-input");
 const lembrarDeMimInput = document.getElementById("remember-me-input");
 
-/*
+
 loginForm.addEventListener('submit', () => {
     let passwordGiven = passwordDisplayBox.value;
     let emailGiven = emailTextBox.value;
-    let lembrarDeMimGiven = lembrarDeMimInput.value;
+    let lembrarDeMimGiven = lembrarDeMimInput.checked;
 
     alert("LOGIN FEITO: \n Email: " + emailGiven + "\nSenha: " + passwordGiven + "\n Lembrar de mim: " + lembrarDeMimGiven)
-})*/
+})

@@ -88,6 +88,7 @@ body {
     align-content: top;
     gap: 10px;
     overflow-y: scroll;
+    overflow-x: clip;
     scroll-behavior: smooth;
     position: fixed;
     top: 100px;
@@ -96,10 +97,10 @@ body {
     width: 100%;
     height: 100%;
     padding-top: 10px;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     background-position: center;
-
-    background-image: url(../../img/dragon-scales.svg);
+    background-size: cover;
+    background-image: url(../../img/Hexagon.svg);
 }
 
 /* width */
@@ -129,7 +130,7 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(30px);
 
     height: 900px;
@@ -151,9 +152,10 @@ body {
     margin-bottom: 20px;
 }
 
-.first-inputs-container, .seccond-inputs-container {
+.first-inputs-container,
+.seccond-inputs-container {
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -178,8 +180,8 @@ body {
     gap: 30px;
     justify-content: center;
     align-items: center;
-    border: 2px solid;
-    border-radius: 8px;
+    border: 1px solid;
+    border-radius: 5px;
     margin-bottom: 0px;
     transition: all 0.2s ease;
 }
@@ -190,11 +192,11 @@ body {
     align-items: center;
     gap: 10px;
     padding-left: 5px;
-    font-size: small;
+    font-size: medium;
     color: red;
 }
 
-.success-message{
+.success-message {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -233,33 +235,42 @@ body {
 }
 
 .input-password,
-.input-email, 
-.input-username, 
+.input-email,
+.input-username,
 .input-age,
 .input-phone,
 .input-cpf,
-.input-name{
-    
+.input-name {
+
     width: 80%;
     height: 100%;
     font-size: 15px;
     background: transparent;
     border: none;
     outline: none;
+
+}
+
+/* Escondendo as flechas dos inputs de números */
+
+.input-cpf::-webkit-outer-spin-button,
+.input-cpf::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .input-password::placeholder,
-.input-email::placeholder, 
-.input-username::placeholder, 
+.input-email::placeholder,
+.input-username::placeholder,
 .input-age::placeholder,
 .input-phone::placeholder,
 .input-cpf::placeholder,
-.input-name::placeholder
-{
-color: #ffff;
+.input-name::placeholder {
+    color: #ffff;
 }
 
-::-webkit-calendar-picker-indicator { opacity: 0;}
+::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
 
 .toggle-password-display {
     display: flex;
@@ -307,7 +318,7 @@ color: #ffff;
     transition: all 0.2s ease;
 }
 
-.login-button:disabled{
+.login-button:disabled {
     filter: grayscale();
     cursor: not-allowed;
 }
@@ -363,11 +374,12 @@ color: #ffff;
     color: rgb(255, 255, 255);
 }
 
-.login-link{
+.login-link {
     text-decoration: underline;
 }
 
-.terms-of-service, .news-letter{
+.terms-of-service,
+.news-letter {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -376,7 +388,7 @@ color: #ffff;
     gap: 5px;
 }
 
-.terms-of-service .terms-of-service-link{
+.terms-of-service .terms-of-service-link {
     text-decoration: underline;
 }
 
@@ -407,4 +419,3 @@ color: #ffff;
     gap: 10px;
     transform: scale(1.1);
 }
-
