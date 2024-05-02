@@ -135,7 +135,7 @@ register_form.addEventListener('submit', (e) => {
 
     password2Passed = true
 
-    if (inputs.password_input.value != inputs.password2_input.value || inputs.password2_input.value != "" || inputs.password2_input.value != " ") {
+    if (inputs.password_input.value != inputs.password2_input.value) {
         erros++
         password2Passed = false
         errorMessagePassword2.innerHTML = "As senhas não coincidem!" + warningIcon
@@ -157,10 +157,16 @@ register_form.addEventListener('submit', (e) => {
 
     anoInserido = inputs.age_input.value.split("-")[0]
 
+    alert(year + " : " + anoInserido)
     if (year - anoInserido < 18) {
         erros++
         errorMessageAge.innerHTML = "Esse site é proibido para menores de 18 anos!" + warningIcon
 
+    }
+
+    if (agePassed) {
+        errorMessageAge.innerHTML = successIcon
+        errorMessageAge.setAttribute("class",successClass)
     }
     // Impedir o envio do formulario 
 
