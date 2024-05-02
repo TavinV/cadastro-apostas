@@ -196,7 +196,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../../img/Hexagon.svg);
+    background-image: url(../img/Hexagon.svg);
 }
 
 /* width */
@@ -227,9 +227,9 @@ body {
     align-content: center;
     height: fit-content;
     width: 80%;
-    border: 2px solid #eae2b7;
-    border-radius: 10px;
-    backdrop-filter: blur(20px);
+    border: 1px solid #eae2b7;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
     background: transparent;
     box-shadow: rgba(0, 0, 0, 0.15) 20px 19px 20px 0px;
     transition: all 0.5s ease;

@@ -68,13 +68,9 @@ let errorMessageCpf = document.getElementById("error-message-cpf")
 const warningIcon = `<ion-icon name="warning-outline"></ion-icon>`
 const successIcon = `<ion-icon name="checkmark-outline"></ion-icon>`
 const successClass = "success-message"
-const successClass = "success-message"
 
 const register_form = document.getElementById("register-form");
 
-function stringContemTexto(texto1, texto2) {
-    return texto2.split('').some(char => texto1)
-}
 
 register_form.addEventListener('submit', (e) => {
     let erros = 0;
@@ -82,10 +78,8 @@ register_form.addEventListener('submit', (e) => {
     // Todos os campos estão preenchidos
 
     for (const [key, value] of Object.entries(inputs)) {
-        // alert(key + " : " + value.value);
-
-        if (value.value == " " || value.value == null || value.value == "") {
-            value.innerHTML = "Campo obrigatório!"
+        if (value.value == " " || value.value == null || value.value == "" || value.value == NaN || value.value == undefined) {
+            erros++
         }
     }
 
@@ -94,7 +88,7 @@ register_form.addEventListener('submit', (e) => {
     usernamePassed = true
 
     const prohibitedChars = `/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;~^1234567890`
-    const usernameContemCaracteresProibidos = prohibitedChars.split('').some(char => inputs.username_input.value)
+    const usernameContemCaracteresProibidos = prohibitedChars.split('').some(char => inputs.username_input.value.includes(char))
 
     if (usernameContemCaracteresProibidos) {
         erros++
@@ -103,7 +97,7 @@ register_form.addEventListener('submit', (e) => {
     }
 
     // Caso todos os testes sejam positivos 
-    if (usernamePassed) {
+    if (usernamePassed && inputs.username_input.value != "" && inputs.username_input.value != " ") {
         errorMessageUsername.innerHTML = successIcon
         errorMessageUsername.setAttribute("class", successClass)
     }
@@ -115,8 +109,8 @@ register_form.addEventListener('submit', (e) => {
     const specialChars = `/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;`
     const numbers = `1234567890`
 
-    const senhaContemCaracterEspecial = specialChars.split('').some(char => inputs.password_input.value)
-    const senhaContemNumeros = numbers.split('').some(char => inputs.password_input.value)
+    const senhaContemCaracterEspecial = specialChars.split('').some(char => inputs.password_input.value.includes(char))
+    const senhaContemNumeros = numbers.split('').some(char => inputs.password_input.value.includes(char))
 
     if (!senhaContemCaracterEspecial) {
         erros++
@@ -141,7 +135,7 @@ register_form.addEventListener('submit', (e) => {
 
     password2Passed = true
 
-    if (inputs.password_input.value != inputs.password2_input.value) {
+    if (inputs.password_input.value != inputs.password2_input.value || inputs.password2_input.value != "" || inputs.password2_input.value != " ") {
         erros++
         password2Passed = false
         errorMessagePassword2.innerHTML = "As senhas não coincidem!" + warningIcon
@@ -152,6 +146,8 @@ register_form.addEventListener('submit', (e) => {
         errorMessagePassword2.innerHTML = successIcon
         errorMessagePassword2.setAttribute("class", successClass)
     }
+
+
 
     // Idade maior que 18
     agePassed = true;
@@ -169,9 +165,11 @@ register_form.addEventListener('submit', (e) => {
     // Impedir o envio do formulario 
 
     if (erros > 0) {
+        alert("envio falhou")
         e.preventDefault()
     }
-})
+}
+)
 
 // Adicionar traços, DDD entre outros
 
